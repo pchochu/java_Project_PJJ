@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/semestralkaPjj.iml" filepath="$PROJECT_DIR$/.idea/modules/semestralkaPjj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/semestralkaPjj_main.iml" filepath="$PROJECT_DIR$/.idea/modules/semestralkaPjj_main.iml" group="semestralkaPjj" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/semestralkaPjj_test.iml" filepath="$PROJECT_DIR$/.idea/modules/semestralkaPjj_test.iml" group="semestralkaPjj" />
+    </modules>
+  </component>
+</project>
