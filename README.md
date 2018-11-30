@@ -52,7 +52,7 @@ oddělená čárkou a každý ostrov bude na vlastním řádku. Ostrovy budou se
 podle jejich velikosti vzestupně.
 Příklad výstupu (jména uzlů nemusí být ve stejném pořadí jako na vstupu):
 <br />
-2
+2 
 <br />
 E,D <br />
 C,A,B <br />
