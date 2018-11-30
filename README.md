@@ -51,6 +51,7 @@ Výpis jednotlivých ostrovů, kdy jména uzlů pro daný ostrov budou na jednom
 oddělená čárkou a každý ostrov bude na vlastním řádku. Ostrovy budou seřazeny
 podle jejich velikosti vzestupně.
 Příklad výstupu (jména uzlů nemusí být ve stejném pořadí jako na vstupu):
+<br />
 2
 <br />
 E,D <br />
