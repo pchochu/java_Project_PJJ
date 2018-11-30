@@ -52,8 +52,9 @@ oddělená čárkou a každý ostrov bude na vlastním řádku. Ostrovy budou se
 podle jejich velikosti vzestupně.
 Příklad výstupu (jména uzlů nemusí být ve stejném pořadí jako na vstupu):
 2
-E,D
-C,A,B
+<br />
+E,D <br />
+C,A,B <br />
 ## GUI
 Pro výstup bude sloužit samostatný grafický prvek zobrazující nalezené ostrovy.
 # Další vlastnosti programu
