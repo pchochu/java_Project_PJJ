@@ -18,6 +18,11 @@ public class TransmissionSystem implements ITransmissionSystem {
         return transmissionSystem;
     }
 
+    /*
+        if vertex src or vertex dest doesn't exist in the system, throws exception.
+        if the path from src to dest already exists, throws exception
+        otherwise, create path between src and dest
+     */
     @Override
     public void addPath(String src, String dest) throws IllegalArgumentException {
         if(!transmissionSystem.containsKey(src)){
@@ -25,6 +30,7 @@ public class TransmissionSystem implements ITransmissionSystem {
         } else if(!transmissionSystem.containsKey(dest)){
             throw new IllegalArgumentException(String.format("No vertex %s found", dest));
         } else if(transmissionSystem.containsKey(src)){
+            // read actual paths from vertex src
             LinkedList<String> ll = transmissionSystem.get(src);
             if(ll.contains(dest)) {
                 throw new IllegalArgumentException(String.format("The path from %s to %s already exists", src, dest));

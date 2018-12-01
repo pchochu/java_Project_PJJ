@@ -12,11 +12,11 @@ public class Grep{
     }
 
     protected void addVertexOrPath(ITransmissionSystem transmissionSystem, String line, String controller){
-        if (controller == "vertex") {
+        if (controller.equals("vertex")) {
             transmissionSystem.addVertex(line);
-            transmissionSystemHandler.createTransmissionSystem(line);
+            transmissionSystemHandler.createTransmissionSystemAndAddToListOfSystems(line);
         }
-        if (controller == "path") {
+        if (controller.equals("path")) {
             String[] fromTo = line.split(":");
             String src = fromTo[0];
             String dest = fromTo[1];

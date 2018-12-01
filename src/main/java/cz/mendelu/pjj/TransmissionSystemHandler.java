@@ -1,10 +1,6 @@
 package cz.mendelu.pjj;
 
-import sun.awt.image.ImageWatched;
-
 import java.util.LinkedList;
-import java.util.Set;
-
 public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
 
     @Override
@@ -13,7 +9,7 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
     }
 
     @Override
-    public void createTransmissionSystem(String vertex) {
+    public void createTransmissionSystemAndAddToListOfSystems(String vertex) {
         TransmissionSystem transmissionSystem = new TransmissionSystem();
         transmissionSystem.addVertex(vertex);
         listOfTransmissionSystems.add(transmissionSystem);
@@ -31,6 +27,9 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
         }
     }
 
+    /*
+        returns transmissionSystem containing String vertex
+     */
     private TransmissionSystem findTransmissionSystemByContainingVertex(String vertex) {
         for(TransmissionSystem transmissionSystem: listOfTransmissionSystems){
             if(transmissionSystem.getAllVertices().contains(vertex)){
@@ -44,6 +43,7 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
         addNewVerticesFromDestSystemToSourceSystem(sourceSystem, destSystem);
         addNewPathsFromDestSystemToSourceSystem(sourceSystem,destSystem);
     }
+
 
     private void addNewPathsFromDestSystemToSourceSystem(TransmissionSystem sourceSystem, TransmissionSystem destSystem) {
         for(String vertex: destSystem.getAllVertices()){

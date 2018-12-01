@@ -4,7 +4,7 @@ public class AppHandler {
 
     private Grep grep;
     private ITransmissionSystemHandler transmissionSystemHandler;
-    String[] args;
+    private String[] args;
 
     public AppHandler(String[] args) {
         this.transmissionSystemHandler = new TransmissionSystemHandler();
@@ -24,11 +24,11 @@ public class AppHandler {
         transmissionSystemHandler.printAllTransmissionSystems();
     }
 
-    public void readVerticesAndPathsFromTerminalAndSaveToSystem(ITransmissionSystem transmissionSystem){
+    private void readVerticesAndPathsFromTerminalAndSaveToSystem(ITransmissionSystem transmissionSystem){
         ((GrepTerminal)grep).readInputFromTerminal(transmissionSystem);
     }
 
-    public void readVerticesAndPathsFromFileAndSaveToSystem(ITransmissionSystem transmissionSystem){
-        ((GrepFile) grep).readInputFromFile(transmissionSystem, args[0]);
+    private void readVerticesAndPathsFromFileAndSaveToSystem(ITransmissionSystem transmissionSystem){
+        ((GrepFile)grep).readInputFromFile(transmissionSystem, args[0]);
     }
 }
