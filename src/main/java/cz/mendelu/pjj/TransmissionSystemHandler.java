@@ -17,18 +17,23 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
 
     @Override
     public void mergeTransmissionSystems(String src, String dest) {
-        TransmissionSystem sourceSystem = findTransmissionSystemByContainingVertex(src);
-        TransmissionSystem destSystem = findTransmissionSystemByContainingVertex(dest);
-        if(sourceSystem.equals(destSystem)){
-            sourceSystem.addPath(src,dest);
-        } else {
-            merge(sourceSystem, destSystem);
-            listOfTransmissionSystems.remove(destSystem);
+        try {
+            TransmissionSystem sourceSystem = findTransmissionSystemByContainingVertex(src);
+            TransmissionSystem destSystem = findTransmissionSystemByContainingVertex(dest);
+
+            if (sourceSystem.equals(destSystem)) {
+                sourceSystem.addPath(src, dest);
+            } else {
+                merge(sourceSystem, destSystem);
+                listOfTransmissionSystems.remove(destSystem);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
     /*
-        returns transmissionSystem containing String vertex
+        returns transmissionSystem from listOfTransmissionSystems containing String vertex
      */
     private TransmissionSystem findTransmissionSystemByContainingVertex(String vertex) {
         for(TransmissionSystem transmissionSystem: listOfTransmissionSystems){
@@ -36,7 +41,7 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
                 return transmissionSystem;
             }
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException(String.format("There is no graph containing %s", vertex));
     }
 
     private void merge(TransmissionSystem sourceSystem, TransmissionSystem destSystem) {
@@ -49,6 +54,14 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
         for(String vertex: destSystem.getAllVertices()){
             LinkedList<String> dest = destSystem.getTransmissionSystem().get(vertex);
             for(String path: dest){
+                /*
+                    Creating path creates two-way path. Therefore it is needed to remove
+                    one one-way path from destSystem
+                    Example: If there is path from A -> B, then there is path from B -> A
+                    When going trough the system, there is the same path added twice
+                    to system which causes error. One one-way path has to be removed
+                  */
+                destSystem.getTransmissionSystem().get(path).remove(vertex);
                 sourceSystem.addPath(vertex, path);
             }
         }

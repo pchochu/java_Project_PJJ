@@ -4,16 +4,10 @@ C
 D
 E
 F
-X
-Y
-G
 
 A:B
 A:C
 C:D
-E:F
-F:G
-E:A
-E:B
-X:Y
+D:A
+F:A
 

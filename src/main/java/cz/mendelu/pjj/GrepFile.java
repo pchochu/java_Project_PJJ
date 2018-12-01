@@ -19,7 +19,7 @@ public class GrepFile extends Grep {
         }
     }
 
-    public void grepFile(File file, ITransmissionSystem transmissionSystem, String regex, String controller){
+    private void grepFile(File file, ITransmissionSystem transmissionSystem, String regex, String controller) {
         try (Reader r = new FileReader(file)){
             grep(r, transmissionSystem, regex, controller);
         } catch (FileNotFoundException e) {
@@ -41,7 +41,7 @@ public class GrepFile extends Grep {
                 }
             }
         } catch (Exception e) {
-            System.err.println(e);
+            e.printStackTrace();
         }
     }
 }
