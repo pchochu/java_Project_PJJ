@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e029e8ee-46f3-4d50-8a6d-3ae255a780f8" name="Default" comment="Changes for better reading&#10;Problem with adding path twice to system resolved">
+    <list default="true" id="e029e8ee-46f3-4d50-8a6d-3ae255a780f8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/AppHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/AppHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/Grep.class" afterPath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/Grep.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/ITransmissionSystemHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/ITransmissionSystemHandler.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/TransmissionSystem.class" afterPath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/TransmissionSystem.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/TransmissionSystemHandler.class" afterPath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/TransmissionSystemHandler.class" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/mendelu/pjj/AppHandler.java" afterPath="$PROJECT_DIR$/src/main/java/cz/mendelu/pjj/AppHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/mendelu/pjj/GrepFile.java" afterPath="$PROJECT_DIR$/src/main/java/cz/mendelu/pjj/GrepFile.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cz/mendelu/pjj/TransmissionSystemHandler.java" afterPath="$PROJECT_DIR$/src/main/java/cz/mendelu/pjj/TransmissionSystemHandler.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test.txt" afterPath="$PROJECT_DIR$/src/main/resources/test.txt" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/GrepFile.class" afterPath="$PROJECT_DIR$/out/production/classes/cz/mendelu/pjj/GrepFile.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/test.txt" afterPath="$PROJECT_DIR$/out/production/resources/test.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -708,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543671894992</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changes for better reading&#10;Problem with adding path twice to system resolved">
+      <created>1543692087704</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1543692087704</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -722,14 +722,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-16" y="-16" width="3232" height="1732" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929438" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292857" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292857" sideWeight="0.49870467" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292857" sideWeight="0.5012953" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998705" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292857" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
