@@ -17,7 +17,7 @@ public class Grep{
             transmissionSystemHandler.createTransmissionSystemAndAddToListOfSystems(line);
         }
         if (controller.equals("path")) {
-            String[] fromTo = line.split(":");
+            String[] fromTo = line.split(",");
             String src = fromTo[0];
             String dest = fromTo[1];
             transmissionSystem.addPath(src,dest);

@@ -18,11 +18,7 @@ public class AppHandler {
             readVerticesAndPathsFromTerminalAndSaveToSystem(masterTransmissionSystem);
         } else if(args.length < 2){
             grep = new GrepFile(transmissionSystemHandler);
-            try {
                 readVerticesAndPathsFromFileAndSaveToSystem(masterTransmissionSystem);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
         }
 
         transmissionSystemHandler.printAllTransmissionSystems();
@@ -33,6 +29,10 @@ public class AppHandler {
     }
 
     private void readVerticesAndPathsFromFileAndSaveToSystem(ITransmissionSystem transmissionSystem){
-        ((GrepFile)grep).readInputFromFile(transmissionSystem, args[0]);
+        try {
+            ((GrepFile) grep).readInputFromFile(transmissionSystem, args[0]);
+        } catch (Exception e) {
+            System.err.println(e);
+        }
     }
 }

@@ -9,18 +9,18 @@ public class GrepFile extends Grep {
         super(transmissionSystemHandler);
     }
 
-    public void readInputFromFile(ITransmissionSystem transmissionSystem, String path){
+    public void readInputFromFile(ITransmissionSystem transmissionSystem, String path) {
         File file = new File(path);
-        if(file.exists() && file.isFile()){
+        if (file.exists() && file.isFile()) {
             grepFile(file, transmissionSystem, "[A-Z]", "vertex");
-            grepFile(file, transmissionSystem, "[A-Z]:[A-Z]", "path");
+            grepFile(file, transmissionSystem, "[A-Z],[A-Z]", "path");
         } else {
             throw new IllegalArgumentException("File path " + path + " is not valid");
         }
     }
 
     private void grepFile(File file, ITransmissionSystem transmissionSystem, String regex, String controller) {
-        try (Reader r = new FileReader(file)){
+        try (Reader r = new FileReader(file)) {
             grep(r, transmissionSystem, regex, controller);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -29,19 +29,19 @@ public class GrepFile extends Grep {
         }
     }
 
-    private void grep(Reader reader, ITransmissionSystem transmissionSystem, String regex, String controller) {
+    private void grep(Reader reader, ITransmissionSystem transmissionSystem, String regex, String controller) throws IOException {
         setPattern(regex);
         BufferedReader br = new BufferedReader(reader);
-        try {
-            String line;
-            while ((line = br.readLine()) != null) {
+        String line;
+        while ((line = br.readLine()) != null) {
+            try {
                 Matcher m = pattern.matcher(line);
                 if (m.matches()) {
                     addVertexOrPath(transmissionSystem, line, controller);
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }

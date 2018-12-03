@@ -8,7 +8,6 @@ F
 A:B
 A:C
 C:D
-C:E
-E:D
+D:A
 F:A
 
