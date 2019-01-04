@@ -17,12 +17,18 @@ public class AppHandler {
             grep = new GrepTerminal(transmissionSystemHandler);
             readVerticesAndPathsFromTerminalAndSaveToSystem(masterTransmissionSystem);
         } else if(args.length < 2){
-            grep = new GrepFile(transmissionSystemHandler);
+            if (args[0].equals("--gui")) {
+                GUI myGui = new GUI(transmissionSystemHandler, masterTransmissionSystem);
+                myGui.setVisible(true);
+            } else {
+                grep = new GrepFile(transmissionSystemHandler);
                 readVerticesAndPathsFromFileAndSaveToSystem(masterTransmissionSystem);
+            }
         }
 
         transmissionSystemHandler.printAllTransmissionSystems();
     }
+
 
     private void readVerticesAndPathsFromTerminalAndSaveToSystem(ITransmissionSystem transmissionSystem){
         ((GrepTerminal)grep).readInputFromTerminal(transmissionSystem);

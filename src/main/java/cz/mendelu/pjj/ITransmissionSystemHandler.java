@@ -43,4 +43,6 @@ public interface ITransmissionSystemHandler {
         Print all actual system stored in listOfTransmissionSystems
      */
     void printAllTransmissionSystems();
+
+    LinkedList<TransmissionSystem> getListOfTransmissionSystems();
 }

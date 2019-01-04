@@ -8,6 +8,10 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
         return MasterTransmissionSystem;
     }
 
+    public LinkedList<TransmissionSystem> getListOfTransmissionSystems() {
+        return listOfTransmissionSystems;
+    }
+
     @Override
     public void createTransmissionSystemAndAddToListOfSystems(String vertex) {
         TransmissionSystem transmissionSystem = new TransmissionSystem();
@@ -75,7 +79,7 @@ public class TransmissionSystemHandler implements ITransmissionSystemHandler  {
 
     @Override
     public void printAllTransmissionSystems() {
-        for(TransmissionSystem transmissionSystem: listOfTransmissionSystems){
+        for (TransmissionSystem transmissionSystem : getListOfTransmissionSystems()) {
             System.out.println("************");
             System.out.println(transmissionSystem.getAllVertices());
         }

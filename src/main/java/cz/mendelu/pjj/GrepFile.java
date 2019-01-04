@@ -1,7 +1,6 @@
 package cz.mendelu.pjj;
 
 import java.io.*;
-import java.util.regex.Matcher;
 
 public class GrepFile extends Grep {
 
@@ -29,19 +28,4 @@ public class GrepFile extends Grep {
         }
     }
 
-    private void grep(Reader reader, ITransmissionSystem transmissionSystem, String regex, String controller) throws IOException {
-        setPattern(regex);
-        BufferedReader br = new BufferedReader(reader);
-        String line;
-        while ((line = br.readLine()) != null) {
-            try {
-                Matcher m = pattern.matcher(line);
-                if (m.matches()) {
-                    addVertexOrPath(transmissionSystem, line, controller);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
